@@ -1,38 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro-Control de Acceso</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro-Control de Acceso</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="dashboard2">
-        <!-- Sidebar -->
-        <div class="sidebar2">
-            <h2>Panel de Control</h2>
-            <ul>
-                <li><a href="dashboard.html">Inicio</a></li>
-                <li> Registro personal </li>
-                <li><a href="reportes.html">Reportes</a></li>
-            </ul>
-        </div>
-
-        <!-- Contenido principal -->
-        <div class="logs-container2">
-            <h2><i class="fa-solid fa-file-alt"></i> Registro de Accesos</h2>
-            <ul id="logsList">
-                <li>Entrada Reconocida - 09:30 AM</li>
-                <li>Entrada Reconocida - 10:15 AM</li>
-                <li>Entrada Reconocida - 9:15 AM</li>
-                <li>Entrada Reconocida - 10:15 AM</li>
-                <li>Entrada Reconocida - 10:15 AM</li>
-                <li>Entrada Reconocida - 10:15 AM</li>
-                <li>Entrada Reconocida - 10:15 AM</li>
-                <li>Entrada Reconocida - 10:15 AM</li>
-            </ul>
-        </div>
+  <div class="dashboard2">
+    <!-- Sidebar -->
+    <div class="sidebar2">
+      <h2>Panel de Control</h2>
+      <ul>
+        <li><a href="dashboard.html">Inicio</a></li>
+        <li>Registro personal</li>
+        <li><a href="reportes.html">Reportes</a></li>
+      </ul>
     </div>
+
+    <!-- Contenido principal -->
+    <div class="logs-container2">
+      <h2><i class="fa-solid fa-file-alt"></i> Registro de Accesos</h2>
+
+      <!-- Barra de búsqueda -->
+      <input type="text" id="searchInput" placeholder="Buscar empleado..." onkeyup="filtrarRegistros()">
+
+      <!-- Tarjetas resumen -->
+      <div class="stats">
+        <div class="card">👨‍💼 Total empleados: 8</div>
+        <div class="card">✔️ Puntuales: 6</div>
+        <div class="card">⏰ Retardos: 2</div>
+      </div>
+
+      <!-- Tabla de registros -->
+      <table id="logsTable">
+        <thead>
+          <tr>
+            <th>Empleado</th>
+            <th>Hora Entrada</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan Pérez</td>
+            <td>09:30 AM</td>
+            <td>✔️ A tiempo</td>
+          </tr>
+          <tr>
+            <td>María López</td>
+            <td>10:15 AM</td>
+            <td>⏰ Retardo</td>
+          </tr>
+          <tr>
+            <td>Carlos Ramírez</td>
+            <td>09:15 AM</td>
+            <td>✔️ A tiempo</td>
+          </tr>
+          <tr>
+            <td>Lucía Torres</td>
+            <td>10:20 AM</td>
+            <td>⏰ Retardo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Script búsqueda -->
+  <script>
+    function filtrarRegistros() {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+      let filas = document.querySelectorAll("#logsTable tbody tr");
+
+      filas.forEach(fila => {
+        let texto = fila.innerText.toLowerCase();
+        fila.style.display = texto.includes(input) ? "" : "none";
+      });
+    }
+  </script>
 </body>
+</html>
+
 </html>
