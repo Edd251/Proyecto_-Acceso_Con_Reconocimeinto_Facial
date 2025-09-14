@@ -1,0 +1,454 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #4361ee;  /* Azul vibrante */
+  --secondary-color: #3f37c9; /* Azul oscuro */
+  --accent-color: #4cc9f0;   /* Celeste */
+  --text-color: #2b2d42;     /* Gris oscuro */
+  --light-bg: #f8f9fa;       /* Fondo claro */
+  --white: #ffffff;
+  --gray: #e9ecef;
+  --success: #4bb543;
+  --primary-dark: #3a0ca3;
+  --primary: #4361ee;
+  --accent: #4cc9f0;
+  --text: #2b2d42;
+  --light: #f8f9fa;
+  --white: #ffffff;
+
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #f5f7fa;
+    color: var(--text);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* login */
+
+.login-container {
+    width: 350px;
+    padding: 2.5rem;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+.login-container h1 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px 7px;
+    margin: 10px 0px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    padding: 1.5rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    text-decoration: solid;
+}
+
+.main-content {
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 1.8 rem;
+    color: var(--primary-dark);
+}
+
+#logoutBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#logoutBtn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.camera-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.camera-container {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.camera-container h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.video {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--gray);
+    margin-bottom: 1rem;
+}
+
+#captureBtn {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#captureBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.logs-container {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.login-container h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+#logsList {
+    list-style: none;
+}
+
+#logsList li {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#logsList li::before {
+    content: ✔️;
+    color: var(--success);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .camera-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* estilos para el registrto*/
+
+.register-container {
+    width: 450px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h1 {
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.register-header p {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--gray);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
+}
+
+.input-group i {
+    color: var(--primary);
+    margin-right: 0.8rem;
+    font-size: 1rem;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+/* seccion para subir la foto*/
+
+.upload-section {
+    margin: 1.5rem 0;
+}
+
+.upload-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.upload-area {
+    border: 2px dashed var(--gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    border-color: var(--accent);
+    background: rgba(76, 201, 240, 0.2);
+}
+
+.upload-area i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.upload-area #fileName {
+    display: block;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+/*Boton de resgitro*/
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+/*enlace login*/
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/*responsive tamano de pantalla*/
+
+@media (max-width: 480px) {
+    .register-container {
+        width: 90%;
+        padding: 1.5rem;
+    }    
+}
+
+/* Dashboard del boton reportes */
+
+.dashboard2 {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar2 {
+    background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    padding: 1.5rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar2 h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    text-decoration: solid;
+}
+
+.logs-container2 {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor principal del boton reportes */
+.logs-container2 {
+    flex: 1;
+    background: white;
+    margin: 40px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logs-container2 h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Lista de accesos boton reportes */
+.logs-container2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logs-container2 ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 16px;
+    color: #374151;
+}
+.logs-container2 ul li:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Control de Personal</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Panel de Control</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li> Registro personal</li>
+                <li><a href="reportes.html">Reportes</a></li>
+            </ul>
+        </div>
+        <div class="main-container">
+            <header class="header">
+                <h1>Reconocimiento Facial</h1>
+                <button id="logoutBtn">Cerrar Sesion</button>
+            </header>
+            <div class="camera-section">
+                <div class="camera-container">
+                    <h2>📷 Camara en Tiempo Real</h2>
+                    <video id="video" width="100%" autoplay></video>
+                    <button id="captureBtn">Capturar Rostro</button>
+                </div>
+                <div class="logs-container">
+                    <h2>📃 Registro de Accesos</h2>
+                    <ul id="logsList">
+                        <li>Entrada Reconocida - 09:30 AM</li>
+                        <li>Entrada Reconocida - 10:15 AM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="camera.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
